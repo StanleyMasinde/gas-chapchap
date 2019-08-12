@@ -23,13 +23,13 @@
       <v-card flat pa-5>
         <v-layout justify-start pa-3 ma-5>
           <v-flex md>
-            <v-btn @click="dialog  = false" light x-large rounded outlined color="success">Cancel</v-btn>
+            <v-btn @click="dialog  = false" block light x-large rounded outlined color="success">Cancel</v-btn>
           </v-flex>
         </v-layout>
-        <v-layout justify-center align-center ma-4>
+        <v-layout justify-center align-center>
           <v-flex xs12 md8>
             <v-stepper v-model="e6">
-              <v-stepper-header>
+              <v-stepper-header flat>
                 <v-stepper-step :complete="e6 > 1" step="1">Select Gas vendor</v-stepper-step>
                 <v-stepper-step :complete="e6 > 2" step="2">CHoose the service type</v-stepper-step>
                 <v-stepper-step :complete="e6 > 3" step="3">Select your Location</v-stepper-step>
@@ -37,27 +37,31 @@
               </v-stepper-header>
 
               <v-stepper-content step="1">
-                <v-card color="grey lighten-1" class="mb-12" height="200px"></v-card>
+                <v-card color="grey lighten-1" class="mb-12" height="200px">
+                  Select Vendor
+                </v-card>
                 <v-btn color="primary" @click="e6 = 2">Continue</v-btn>
-                <v-btn text>Cancel</v-btn>
               </v-stepper-content>
 
               <v-stepper-content step="2">
-                <v-card color="grey lighten-1" class="mb-12" height="200px"></v-card>
+                <v-card color="grey lighten-1" class="mb-12" height="200px">
+                  Choose service type
+                </v-card>
                 <v-btn color="primary" @click="e6 = 3">Continue</v-btn>
-                <v-btn text>Cancel</v-btn>
               </v-stepper-content>
 
               <v-stepper-content step="3">
-                <v-card color="grey lighten-1" class="mb-12" height="200px"></v-card>
+                <v-card color="grey lighten-1" class="mb-12" height="200px">
+                  Select your location
+                </v-card>
                 <v-btn color="primary" @click="e6 = 4">Continue</v-btn>
-                <v-btn text>Cancel</v-btn>
               </v-stepper-content>
 
               <v-stepper-content step="4">
-                <v-card color="grey lighten-1" class="mb-12" height="200px"></v-card>
+                <v-card color="grey lighten-1" class="mb-12" height="200px">
+                  Payment
+                </v-card>
                 <v-btn color="primary" @click="e6 = 1">Continue</v-btn>
-                <v-btn text>Cancel</v-btn>
               </v-stepper-content>
             </v-stepper>
           </v-flex>
@@ -68,7 +72,7 @@
       <router-view />
     </v-content>
     <div class="hidden-lg-and-up">
-    <v-bottom-navigation color="primary">
+    <v-bottom-navigation app fixed absolute color="primary">
       <v-btn to="/" value="recent">
         <span>Home</span>
         <v-icon>home</v-icon>
