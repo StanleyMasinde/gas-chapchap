@@ -1,9 +1,6 @@
 <template>
   <v-container>
-    <v-layout
-      text-center
-      wrap
-    >
+    <v-layout text-center wrap>
       <v-flex xs12>
         <v-img
           :src="require('../assets/logo.png')"
@@ -15,4 +12,3 @@
     </v-layout>
   </v-container>
 </template>
-
